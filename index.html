@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Animated WebPage</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+             <div class="logo">
+                 <a href="">mamon<span>dots</span></a>
+             </div>
+             <div class="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">for businesses</a></li>
+                    <li><a href="">for freelancers</a></li>
+                    <li><a href="">use cases</a></li>
+                    <li><a href="">fQA</a></li>
+                </ul>
+             </div>
+             <div class="btn">
+                <a href="">join now</a>
+             </div>
+        </header>
+        <div class="content">
+            <div class="content-info">
+                <h1>Best Payment<br> Experience</h1>
+				
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                    Totam tempore iste, tenetur quaerat ipsum vitae.
+                </p>
+                <div class="content-btn">
+                    <button class="btn-01">Join Now</button>
+                    <button class="btn-02">Watch a Demo</button>
+                </div>
+                <div class="infoList">
+                    <ul>
+                        <li>Free 14-day trial</li>
+                        <li>No creadit card required</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="img-content">
+                <div class="main-img img1">
+                    <img src="img/Online-Services-Hero-image-1.webp">
+                </div>
+                <div class="main-img img2">
+                    <img src="img/Online-Services-Hero-image-2.webp">
+                </div>
+                <div class="main-img img3">
+                    <img src="img/Online-Services-Hero-image-3.webp">
+                </div>
+                <div class="main-img img4">
+                    <img src="img/Online-Services-Hero-image-4.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prometionVideo">
+        <div class="videoPage">
+            <video src="video/video.mp4" controls></video>
+        </div>
+        <div class="closeVideo">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const ConPlayBtn = document.querySelector('.btn-02');
+        const prometionVideo = document.querySelector('.prometionVideo');
+        const closeVideo = document.querySelector('.closeVideo');
+    
+        ConPlayBtn.addEventListener('click',function(){
+            prometionVideo.classList.add('active');
+        });
+    
+        closeVideo.addEventListener('click',function(){
+            prometionVideo.classList.remove('active');
+        });
+
+        let animation = anime({
+            targets:'header',
+            translateY:[-80,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+        });
+
+        anime({
+            targets:'.content-info h1',
+            translateX:[50,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:300,
+        });
+        anime({
+            targets:'.content-info p',
+            translateX:[-50,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500,
+        });
+
+        anime({
+            targets:'.content-info .content-btn',
+            translateY:[-50,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:700,
+        });
+
+        anime({
+            targets:'.content-info .infoList',
+            translateX:[-50,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:800,
+        });
+
+        anime({
+            targets:'.img-content .img1',
+            translateX:[100,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:900,
+        });
+
+        anime({
+            targets:'.img-content .img2',
+            translateX:[60,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:1200,
+        });
+
+        anime({
+            targets:'.img-content .img3',
+            translateX:[-60,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:1200,
+        });
+
+        anime({
+            targets:'.img-content .img4',
+            translateY:[60,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:1500,
+        });
+
+
+    </script>
+</body>
+</html>
